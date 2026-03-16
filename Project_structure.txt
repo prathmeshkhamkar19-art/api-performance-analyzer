@@ -1,0 +1,91 @@
+# This Folder contain main 6 Files
+
+project_api_analyzer
+│
+├── app
+│   ├── __init__.py
+│   ├── models
+│   │   ├── __init__.py
+│   │   └── api_result.py
+│   │
+│   ├── routes
+│   │   └── api_routes.py
+│   |--- Forms
+           |-- api_form.py
+|  
+├── static
+├── templates
+├── Project_structure.txt
+└── run.py
+
+
+
+App - All core application logic.
+      Everything related to the Flask application stays inside this folder.
+      To keep the project organized and scalable.
+      it is used by run.py
+   
+   * __init__.py - This file creates and configures the Flask application.
+                  To  initialize the application and connect all components.
+                  
+                  -create Flask app
+                  - register routes
+                  - connect database
+                  - load configuration
+
+    * config.py - in that we connect the database  create secreate key diff means we use in other where 
+
+
+    *models - Database table definitions using SQLAlchemy.
+              Each Python class represents one table in the database.
+
+         *models/api_result.py - The database model for storing API test results.
+
+            | Column        | Purpose           |
+            | ------------- | ----------------- |
+            | id            | unique record id  |
+            | url           | API URL tested    |
+            | method        | GET / POST        |
+            | response_time | time taken        |
+            | status_code   | API response code |
+
+    * routes - All Flask routes (API endpoints).
+              Routes define what happens when a user accesses a URL.
+
+            Why it is used
+           To separate request handling from other logic.
+
+        *request/api_routes.py  - 
+                 
+                  -What it contains
+                   API endpoints for the application.
+                   
+                  - Why it is used
+
+                    This file handles:
+
+                    receiving user input
+
+                    calling analyzer logic
+
+                    returning results
+    
+                  - Uses
+                        models/api_result.py
+                        to store data in the database.
+   
+    * form - this folder use to get the infromation of user and url in flask wtf 
+               - api_form.py - this file done this task and in routes import this file
+    
+        
+Templates -  All HTML files used by Flask. 
+
+
+Static - Frontend assets like:
+         - Why it is used
+            Flask automatically serves static files from this folder.
+
+
+run.py - The entry point of the application.
+It starts the Flask server.
+
