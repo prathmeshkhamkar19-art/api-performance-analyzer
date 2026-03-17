@@ -89,3 +89,16 @@ Static - Frontend assets like:
 run.py - The entry point of the application.
 It starts the Flask server.
 
+
+
+
+
+
+
+Phase 1 — Project Idea
+Phase 2 — Project Architecture
+Phase 3 — Flask App Initialization
+Phase 4 — Database Models
+Phase 5 — API Routes
+Phase 6 — API Analyzer Logic
+Phase 7 — Final Project Demo
