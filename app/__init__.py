@@ -16,4 +16,4 @@ def create_app():  #this function we used to create any app only import to that 
 
   db.init_app(app)  #this connect the database to the app
 
-  return app gf
+  return app 
