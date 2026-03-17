@@ -1,6 +1,6 @@
 # step 1 of project
 # in that create Variable for the secreate key and also create the path for database
-
+# install pymysql package 
 class Config:
     SECRET_KEY = "a_random_secure_key_123"
 
