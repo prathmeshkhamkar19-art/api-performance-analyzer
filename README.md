@@ -4,8 +4,8 @@ A Flask-based tool that analyzes API response time and performance.
 
 ✅ Phase 1 — Project Idea  
 ✅ Phase 2 — Project Structure  
-⬜ Phase 3 — Flask Initialization  
-⬜ Phase 4 — Database Models  
+✅ Phase 3 — Flask Initialization  
+✅ Phase 4 — Database Models  
 ⬜ Phase 5 — API Routes  
 ⬜ Phase 6 — API Analyzer Logic  
 ⬜ Phase 7 — Final Demo
@@ -36,3 +36,24 @@ ________________________________________________________________________________
     - and run it 
 
 _______________________________________________________________________________________________________________________________________________
+
+*phase 4 - Database models
+ 
+ *No Package installed 
+
+  - in models folder
+    - created new file to create the table importing the db from app with class
+    - 1 file create to store data of user and other for apilog
+    - in user file/table it is show rearion to many ap request (one to many) thats why we created reationship column in it 
+    - name as api_logs
+    -in aplog_table file/table we show extra col foreign key to connect the table with primarey key of user_table.py
+ 
+  - in create_database.py 
+     - to create the table we need app to start and create the table in that databse 
+     - se we also need database
+     -from app import create_app() #function and db 
+     - then using with app_context() function tell the we working on same env where the app already exist 
+     -then create the function in database (db) using db.create_all() function 
+
+
+__________________________________________________________________________________________________________________________________________________
