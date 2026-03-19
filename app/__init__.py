@@ -6,6 +6,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from .config import Config
+from models import user_table,apilog_table  # phase 4- import hte table to create the databse and put this in for this app
 
 db = SQLAlchemy() #THIS IS OBJECT with variable db
 
