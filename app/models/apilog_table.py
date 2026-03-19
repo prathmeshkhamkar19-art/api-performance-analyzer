@@ -1,7 +1,7 @@
 # this table is used to store the information that comes from the api that user send 
 #like  - time taken(responce) ,status code
 
-from app import db
+from .. import db   #either using app we use ( .. ) this go back folder 
 
 class apilog_table(db.Model):  #this create thetable for apilog_table
     id =db.Column(db.Integer,primary_key = True)
@@ -11,4 +11,4 @@ class apilog_table(db.Model):  #this create thetable for apilog_table
     
 
     #foreign_key which store the primary key of 'user table'
-    user_id = db.Column(db.Integer,db.Foreignkey('user.id'))
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
