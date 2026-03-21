@@ -1,4 +1,4 @@
-from app.service.analyzer import api_aalyzer_service
+from app.service.analyze import api_aalyzer_service
 
 from flask import Blueprint,request   #Blueprint make group of all route then to use this routes simply write
                 #app.register_blueprint(api_bp)
