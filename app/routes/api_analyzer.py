@@ -1,4 +1,4 @@
-from app.service.analyze import api_aalyzer_service
+from app.service.analyze import api_analyze_service
 
 from flask import Blueprint,request   #Blueprint make group of all route then to use this routes simply write
                 #app.register_blueprint(api_bp)
@@ -11,6 +11,6 @@ api_bp = Blueprint("api", (__name__))
 def analyzer():
     url = request.json.get("url")    #get the url using json to
 
-    result = api_analyze_service()
+    result = api_analyze_service(url)
     
     return result , 200  #return result in json file 
