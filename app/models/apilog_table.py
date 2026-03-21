@@ -8,7 +8,13 @@ class apilog_table(db.Model):  #this create thetable for apilog_table
     api_url = db.Column(db.String(255),nullable = False)
     status_code = db.Column(db.Integer)
     reponse_time = db.Column(db.Float)
+    average_time = db.Column(db.float)
+    min_time =     db.Column(db.float)
+    max_time =     db.Column(db.float)
+    Total_request_send  = db.Column(db.Integer)
+    server          =  db.Column(db.String(50))
+    location        =  db.Column(db.String(50))
     
 
     #foreign_key which store the primary key of 'user table'
-    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))   #case sensitive use lower case only even table is pascal case
