@@ -15,3 +15,7 @@ class url_input(Flaskform):  #in analyze page need to create object of this clas
 
     url = URLField(label="Enter the URL...",validators=[ DataRequired(),URL(message="Please enter a valid URL")]) #this ios uesd to take input as url
     submit = SubmitField("Analyze")
+
+class user_login(Flaskform) :
+    email = StringField(label=" enter email to check" ,validators=[DataRequired(), Email()])  # that is for login page store email and check from db
+    submit= SubmitField(label="submit")
