@@ -12,4 +12,4 @@ class Users (db.Model):  # class = table
     emailid = db.Column(db.String(150), nullable = False , unique = True )
 
   # so one user send many api reuset ro check performanc then we create realtionship 
-    api_logs = db.relationship('apilog_table', backref='user', lazy = True)
+    api_logs = db.relationship('APIlog', backref='user', lazy = True)

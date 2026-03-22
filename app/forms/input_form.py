@@ -11,7 +11,7 @@ class user_input(Flaskform):  #need to inherit the class to use form
     submit = SubmitField(label="Submit")
     
     
-class url_input(Flaskform):
+class url_input(Flaskform):  #in analyze page need to create object of this class to get url
 
-    url = URLField(label="Enter the URL...",validators=[ DataRequired(),URL(message="Please enter a valid URL")])
+    url = URLField(label="Enter the URL...",validators=[ DataRequired(),URL(message="Please enter a valid URL")]) #this ios uesd to take input as url
     submit = SubmitField("Analyze")
