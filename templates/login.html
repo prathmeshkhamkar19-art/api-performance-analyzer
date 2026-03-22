@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="margin-bottom: 20px;">Login</h2>
+
+<form method="POST">
+
+{{ form.hidden_tag() }}  {{ form.hidden_tag() }}  <!-- CSRF protection token: generated on server, stored in session, and validated on form submission -->
+
+   <div style="margin-bottom: 15px;">
+        {{ form.email.label }} <br>
+        {{ form.email(class="input") }}
+
+        {% for error in form.email.errors %}
+            <p style="color:red;">{{ error }}</p>
+        {% endfor %}
+    </div>
+    
+    <!-- BUTTON SECTION -->
+    <div style="margin-top: 20px; display: flex; gap: 10px;">
+        
+        {{ form.submit(class="btn") }}  <!-- Login button -->
+
+        <a href="{{ url_for('web.registration') }}">
+            <button type="button" class="btn" style="background:#6c757d;">
+                Register
+            </button>
+        </a>
+
+    </div>
+
+</form>
+
+{% endblock %}
