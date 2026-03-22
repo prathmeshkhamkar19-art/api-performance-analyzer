@@ -4,7 +4,7 @@
 # also try to create the registration option 
 # first import the object of database that hold information of the path of databse (db) from app
 
-from .. import db  #either using app we use ( .. ) this go back folder
+from app import db  #either using app we use ( .. ) this go back folder
 
 class Users (db.Model):  # class = table
     id = db.Column(db.Integer,primary_key = True)     # variable = column

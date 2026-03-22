@@ -1,6 +1,6 @@
 from flask import Blueprint # make group of routes directly used in app.py without complicating file
 from flask import redirect,Response,url_for,request,render_template,session
-from forms.input_form import user_input,url_input,user_login  #this is used to called the form or used to form the Object of that form
+from app.forms.input_form import user_input,url_input,user_login  #this is used to called the form or used to form the Object of that form
 from app.models.user_table import Users    # this is used to import the database to connect with form in routes to store data 
 from app import db    # this used to say in which database the the table and the value add
 # Form using : -- 
@@ -30,7 +30,7 @@ def login():
     return render_template("login.html",form = obj_for_userloginform)
 
 
-@web_bp.route("/registration" , method= ["GET","POST"])    #this is login page 
+@web_bp.route("/registration" , methods= ["GET","POST"])    #this is login page 
 def registration():
    obj_of_userinputform = user_input()  #creting the object of that form to use initialize the obj with name and then pass it with login
    if request.method == "POST": 
@@ -56,7 +56,7 @@ def registration():
 
 
 
-@web_bp.route("/analyze" , method = ["POST"])
+@web_bp.route("/analyze" , methods = ["POST"])
 def analyze():
   obj_of_url_input = url_input()  #this used to get the form for url on that page 
   if request.method == "POST" :
@@ -69,7 +69,7 @@ def analyze():
 
 
 
-@web_bp.route("/result" , method= ["POST" "GET"]) 
+@web_bp.route("/result" , methods= ["POST" "GET"]) 
 def result():
  
 
